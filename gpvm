@@ -17,7 +17,7 @@ AddVersion() {
 }
 
 ListVersions() {
-  echo $(find ~/.config/godot-version-manager/ -maxdepth 1 -type l | xargs basename)
+  echo $(find ~/.config/godot-version-manager/ -maxdepth 1 -type l -exec basename {} \;)
 }
 
 LaunchVersion() {
